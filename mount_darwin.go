@@ -175,6 +175,7 @@ func mount(dir string, conf *mountConfig, ready chan<- struct{}, errp *error) (*
 	locations := conf.osxfuseLocations
 	if locations == nil {
 		locations = []OSXFUSEPaths{
+			OSXFUSELocationV4,
 			OSXFUSELocationV3,
 			OSXFUSELocationV2,
 		}
